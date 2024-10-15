@@ -50,7 +50,7 @@ const FormQuestionnaire = () => {
         }
     }, [confirmation]);
 
-    const handleChange = (event) => {
+    const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         const { name, value } = event.target;
         setAnswers((prevAnswers) => ({
             ...prevAnswers,
