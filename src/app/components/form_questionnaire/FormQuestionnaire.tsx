@@ -63,7 +63,7 @@ const FormQuestionnaire = () => {
         return !answers[currentQuestionKey];
     };
 
-    const submitHandler = async (form: HTMLFormElement) => {
+    const submitHandler = async (form: React.FormEvent<HTMLFormElement>) => {
         form.preventDefault();
         setLoading(true);
 
@@ -86,8 +86,6 @@ const FormQuestionnaire = () => {
             console.error(error);
         }
 
-        // Réinitialiser le formulaire après la soumission
-        form.target.reset();
         setAnswers({
             'question-1': '',
             'question-2': '',
