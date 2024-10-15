@@ -59,7 +59,7 @@ const FormQuestionnaire = () => {
     };
 
     const isNextButtonDisabled = () => {
-        const currentQuestionKey = `question-${currentIndex}`;
+        const currentQuestionKey = `question-${currentIndex}` as keyof typeof answers;
         return !answers[currentQuestionKey];
     };
 
