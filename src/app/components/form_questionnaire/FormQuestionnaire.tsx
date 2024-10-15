@@ -28,8 +28,7 @@ const FormQuestionnaire = () => {
         if (chargement) {
             if (loading) {
                 chargement.removeClass("visually-hidden");
-            }
-            else {
+            } else {
                 chargement.addClass("visually-hidden");
             }
         }
@@ -38,20 +37,21 @@ const FormQuestionnaire = () => {
     useEffect(() => {
 
         const confirmationPopup = $("#confirmation")
-        confirmationPopup.on('click', () => {setConfirmation(false)})
+        confirmationPopup.on('click', () => {
+            setConfirmation(false)
+        })
 
         if (confirmationPopup) {
             if (confirmation) {
                 confirmationPopup.removeClass("visually-hidden");
-            }
-            else {
+            } else {
                 confirmationPopup.addClass("visually-hidden");
             }
         }
     }, [confirmation]);
 
     const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-        const { name, value } = event.target;
+        const {name, value} = event.target;
         setAnswers((prevAnswers) => ({
             ...prevAnswers,
             [name]: value
@@ -63,7 +63,7 @@ const FormQuestionnaire = () => {
         return !answers[currentQuestionKey];
     };
 
-    const submitHandler = async (form) => {
+    const submitHandler = async (form: HTMLFormElement) => {
         form.preventDefault();
         setLoading(true);
 
@@ -75,7 +75,7 @@ const FormQuestionnaire = () => {
         const q6 = Number(answers['question-6']);
 
         const url = `${apiUrl}?q1=${q1}&q2=${q2}&q3=${q3}&q4=${q4}&q5=${q5}&q6=${q6}`;
-        const options = { method: 'POST' };
+        const options = {method: 'POST'};
 
         try {
             const response = await fetch(url, options);
