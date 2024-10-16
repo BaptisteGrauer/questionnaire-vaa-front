@@ -379,7 +379,7 @@ const FormQuestionnaire = () => {
                     <div>
                         <Check/>
                     </div>
-                    <p>Merci d'avoir répondu !</p>
+                    <p>Merci d&apos;avoir répondu !</p>
                     <p><small>Réponse enregistrée avec succès</small></p>
                 </div>
                 <div id="credit-photo">
