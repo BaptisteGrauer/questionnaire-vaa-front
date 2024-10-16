@@ -96,6 +96,13 @@ const FormQuestionnaire = () => {
         form.preventDefault();
         setLoading(true);
 
+        // Vérification de l'URL de l'API
+        if (!apiUrl) {
+            console.error("NEXT_PUBLIC_API_URL is not defined");
+            setLoading(false);  // Stop loading if API URL is missing
+            return;
+        }
+
         const q1 = Number(answers['question-1']);
         const q2 = Number(answers['question-2']);
         const q3 = Number(answers['question-3']);
