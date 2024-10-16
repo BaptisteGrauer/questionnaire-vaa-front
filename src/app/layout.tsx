@@ -11,12 +11,7 @@ export default function RootLayout({children}: Readonly<{ children: React.ReactN
     return (
         <html lang="fr">
             <body>
-                <header>
-                    <h1>Questionnaire de satisfaction</h1>
-                </header>
-                <main>
-                    {children}
-                </main>
+            {children}
             </body>
         </html>
     );
