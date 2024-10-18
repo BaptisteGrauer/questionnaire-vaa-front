@@ -1,6 +1,6 @@
 # Front-end questionnaire de satisfaction Va'a
 
-## Prérequis
+## Pré-requis
 
 - Git
 - Node.js v20 ou supérieur
