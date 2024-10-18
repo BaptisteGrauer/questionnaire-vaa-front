@@ -28,7 +28,7 @@ npm run build
 npm run start
 ````
 
-Pour rendre accessible le site via un nom de domaine, créez un reverse proxy du nom de domaine ver ``localhost:3000`` sur le serveur de prod.
+Pour rendre accessible le site via un nom de domaine, créez un reverse proxy du nom de domaine vers ``localhost:3000`` sur le serveur de prod.
 
 
 ## Variables d'environnement
